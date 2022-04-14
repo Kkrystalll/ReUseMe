@@ -1,0 +1,28 @@
+<h1>註冊</h1>
+
+<% if @user.errors.any? %>
+  <% @user.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+<% end %>
+
+
+<%= form_with(model: @user) do |form| %>
+  <div>
+    <%= form.label :username %>
+    <%= form.text_field :username, autocomplete: "off" %>
+  </div>
+  <div>
+    <%= form.label :email %>
+    <%= form.email_field :email, autocomplete: "off" %>
+  </div>
+  <div>
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+  <div>
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation %>
+  </div>
+  <%= form.submit %>
+<% end %>

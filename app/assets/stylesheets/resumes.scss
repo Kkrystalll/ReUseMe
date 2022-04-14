@@ -1,0 +1,23 @@
+.flash {
+  display: flex;
+  background-color: yellow;
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+
+.field_with_errors {
+  display: inline-block;
+
+  label {
+    color: red;
+  }
+
+  input[type="text"],
+  [type="email"],
+  [type="password"],
+  textarea {
+    border: 1px solid red;
+  }
+}

@@ -1,0 +1,13 @@
+<h1>登入</h1>
+
+<%= form_with(url: sessions_path, scope: :user) do |form| %>
+  <div>
+    <%= form.label :account, "帳號" %>
+    <%= form.text_field :account, autocomplete: "off", placeholder: "姓名或email" %>
+  </div>
+  <div>
+    <%= form.label :password, "密碼" %>
+    <%= form.password_field :password, placeholder: "密碼" %>
+  </div>
+  <%= form.submit %>
+<% end %>
