@@ -1,0 +1,14 @@
+<h1>履歷詳細資訊</h1>
+<table>
+  <tr>
+    <td>標題</td>
+    <td>內文</td>
+    <td>狀態</td>
+  </tr>
+  <tr>
+  <td><%= @resume.title %></td>
+  <td><%= @resume.content %></td>
+  <td><%= @resume.status %></td>
+</tr>
+</table>
+<%= link_to '修改', edit_resume_path %>

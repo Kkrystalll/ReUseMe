@@ -1,0 +1,12 @@
+<nav>
+  <% if user_sign_in? %>
+    hi!
+    <%= current_user.username %>
+    <%= link_to '登出', sessions_path, method: :delete %>
+
+  <% else %>
+    <%= link_to '註冊', sign_up_users_path %>
+    <%= link_to '登入', sign_in_users_path %>
+  <% end %>
+
+</nav>

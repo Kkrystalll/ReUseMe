@@ -1,1 +1,5 @@
-<li><%= resume.title %></li>
+<li>
+  <%= link_to resume.title, resume_path(resume) %>
+  //
+  <%= link_to '刪除', resume_path(resume), method: :delete, data: { confirm: "sure?!!!!!!"} %>
+</li>

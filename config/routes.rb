@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
-  get "/resumes", to: "resumes#index"
-  get "/resumes/new", to: "resumes#new", as: "new_resume"
-  post "/resumes", to: "resumes#create"
+  resources :resumes do
+    collection do
+      get :my
+    end
+  end
+
   resource :users, only: [:create] do
     get :sign_up
     get :sign_in
   end
 
-  resources :sessions, only: [:create, :destroy]
+  resource :sessions, only: [:create, :destroy]
   root "resumes#index"
   
 end
